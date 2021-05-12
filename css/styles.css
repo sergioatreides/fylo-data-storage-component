@@ -32,7 +32,7 @@ body {
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr 4fr;
     grid-gap: 20px;
-    grid-template-areas: "area-menu area-bocadillo"
+    grid-template-areas: "area-menu area-disco"
                         "area-menu area-disco";
     margin-bottom: 20px;
 }
@@ -51,14 +51,17 @@ body {
 }
 #bocadillo {
     grid-area: area-bocadillo;
-    border: 1px solid green;
+    height: 0;
 }
 #almacenamiento {
     grid-area: area-disco;
     background-color: var(--dark-blue);
     width: 100%;
+    height: 75%;
+    align-self: end;
     border-radius: 8px;
     padding: 30px;
+    bottom: 0;
 }
 .logo {
     margin-left: 0;
@@ -139,14 +142,15 @@ body {
     margin: 0;
 }
 .espacio-libre {
-    position:absolute;
-   /*  right: 0; */
+     position: relative;
+    transform: translateY(-11vh);
+    margin-right: 0;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     height: 3.7em;
-    width: 9em;
+    width: 10vw;
     background-color: var(--white);
     color: var(--black);
     font-weight: bold;
@@ -155,13 +159,11 @@ body {
 .number {
     font-size: 2em;
     margin-right: 5px;
- /*    margin: 0; */
 }
 .gb-left {
     font-size: .6em;
     filter: opacity(50%);
     margin-left: 5px;
-/*     margin-left: 0px; */
     text-transform: uppercase;
 
 }
