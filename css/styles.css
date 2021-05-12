@@ -142,7 +142,7 @@ body {
     margin: 0;
 }
 .espacio-libre {
-     position: relative;
+    position: relative;
     transform: translateY(-11vh);
     margin-right: 0;
     display: flex;
@@ -156,6 +156,18 @@ body {
     font-weight: bold;
     border-radius: 8px;
 }
+.espacio-libre::after {
+    background-color: transparent;
+    content: "";
+    position: absolute;
+    width: 0; 
+    height: 0; 
+    border-right: 25px solid var(--white);
+    border-top: 0px solid transparent;
+    border-bottom: 25px solid transparent; 
+    bottom: -33%;
+    right: 0;
+}
 .number {
     font-size: 2em;
     margin-right: 5px;
@@ -166,6 +178,39 @@ body {
     margin-left: 5px;
     text-transform: uppercase;
 
+}
+@media screen and (max-width: 700px) {
+    body {
+        background-image: url(../images/bg-mobile.png);
+        background-color: var(--very-dark-blue);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #contenedor {
+        width: 90%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 20px;
+        grid-template-areas: "area-menu"
+                            "area-disco";
+        margin-bottom: 20px;
+    }
+    #almacenamiento {
+        height: 75%;
+        align-self: start;
+        top: 0;
+    }
+    .espacio-libre {
+        position: absolute;
+        right: 0;
+        left: 0;
+        margin: auto;
+        transform: translateY(125%);
+        width: 40vw;
+    }
+    .espacio-libre::after {
+        display: none;
+    }
 }
 
 
