@@ -1,9 +1,11 @@
 :root {
-    --gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+    --gradient-start: hsl(6, 100%, 80%);
+    --gradient-end: hsl(335, 100%, 65%);
     --pale-blue: hsl(243, 100%, 93%);
     --grayish-blue: hsl(229, 7%, 55%);
     --dark-blue: hsl(228, 56%, 26%);
     --very-dark-blue: hsl(229, 57%, 11%);
+    --white: hsl(0, 0%, 100%);
 }
 * {
     box-sizing: border-box;
@@ -31,6 +33,7 @@ body {
     grid-gap: 20px;
     grid-template-areas: "area-menu area-bocadillo"
                         "area-menu area-disco";
+    margin-bottom: 20px;
 }
 #fylo-menu {
     grid-area: area-menu;
@@ -54,7 +57,7 @@ body {
     background-color: var(--dark-blue);
     width: 100%;
     border-radius: 8px;
-    border: 1px solid red;
+    padding: 30px;
 }
 .logo {
     margin-left: 0;
@@ -89,10 +92,51 @@ body {
 #b-upload {
     background-image: url("../images/icon-upload.svg");
 }
-
-
-
-
+.progreso {
+    height: 1.2em;
+    width: 100%;
+    border: 2px solid var(--very-dark-blue);
+    border-radius: 15px; 
+    overflow: hidden;
+    background-color: var(--very-dark-blue);
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+.progreso::-webkit-progress-bar {
+    background-color: var(--very-dark-blue);
+}
+.progreso::-webkit-progress-value {
+    background-image: linear-gradient(to right, var(--gradient-end), var(--gradient-start));
+}
+.progreso::-moz-progress-bar { 
+    background-image: -moz-linear-gradient(right, var(--gradient-end), var(--gradient-start));
+}
+.mensaje,
+.rangos {
+    font-size: 14px;
+    color: var(--white);
+    filter: opacity(70%);
+}
+.acento,
+.rangos {
+    font-weight: bold;
+}
+.rangos {
+    font-size: 12px;
+}
+.rangos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.valor1 {
+    justify-self: start;
+    margin: 0;
+}
+.valor2 {
+    justify-self: end;
+    margin: 0;
+}
 
 
 
