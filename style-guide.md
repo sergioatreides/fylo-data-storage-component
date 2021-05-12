@@ -10,7 +10,6 @@ The designs were created to the following widths:
 ## Colors
 
 ### Primary
-
 - Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%)
 
 ### Neutral
@@ -19,6 +18,7 @@ The designs were created to the following widths:
 - Grayish Blue: hsl(229, 7%, 55%)
 - Dark Blue: hsl(228, 56%, 26%)
 - Very Dark Blue: hsl(229, 57%, 11%)
+
 
 ## Typography
 

@@ -1,0 +1,124 @@
+:root {
+    --gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+    --pale-blue: hsl(243, 100%, 93%);
+    --grayish-blue: hsl(229, 7%, 55%);
+    --dark-blue: hsl(228, 56%, 26%);
+    --very-dark-blue: hsl(229, 57%, 11%);
+}
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Raleway', sans-serif;
+    background-image: url(../images/bg-desktop.png);
+    background-color: var(--very-dark-blue);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: bottom;
+}
+#contenedor {
+    width: 65%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 4fr;
+    grid-gap: 20px;
+    grid-template-areas: "area-menu area-bocadillo"
+                        "area-menu area-disco";
+}
+#fylo-menu {
+    grid-area: area-menu;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 15px;
+    width: 100%;
+    border-radius: 8px;
+    border-top-right-radius: 80px;
+    background-color: var(--dark-blue);
+    padding-left: 30px;
+    filter: drop-shadow(3px 3px 8px var(--very-dark-blue));
+}
+#bocadillo {
+    grid-area: area-bocadillo;
+    border: 1px solid green;
+}
+#almacenamiento {
+    grid-area: area-disco;
+    background-color: var(--dark-blue);
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid red;
+}
+.logo {
+    margin-left: 0;
+    margin-top: 40px;
+    justify-self: start;
+    align-self: center;
+    width: 45%;
+}
+.botonera {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 0;
+    margin-bottom: 15px;
+}
+.boton {
+    width: 3em;
+    height: 3em;
+    margin-right: 15px;
+    background-color: var(--very-dark-blue);
+    border: 0;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#b-document {
+    background-image: url("../images/icon-document.svg");
+}
+#b-folder {
+    background-image: url("../images/icon-folder.svg");
+}
+#b-upload {
+    background-image: url("../images/icon-upload.svg");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
