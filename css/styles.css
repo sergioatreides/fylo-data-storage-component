@@ -6,6 +6,7 @@
     --dark-blue: hsl(228, 56%, 26%);
     --very-dark-blue: hsl(229, 57%, 11%);
     --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
 }
 * {
     box-sizing: border-box;
@@ -137,7 +138,33 @@ body {
     justify-self: end;
     margin: 0;
 }
+.espacio-libre {
+    position:absolute;
+   /*  right: 0; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 3.7em;
+    width: 9em;
+    background-color: var(--white);
+    color: var(--black);
+    font-weight: bold;
+    border-radius: 8px;
+}
+.number {
+    font-size: 2em;
+    margin-right: 5px;
+ /*    margin: 0; */
+}
+.gb-left {
+    font-size: .6em;
+    filter: opacity(50%);
+    margin-left: 5px;
+/*     margin-left: 0px; */
+    text-transform: uppercase;
 
+}
 
 
 
